@@ -32,7 +32,7 @@ const UserProfile = ({
   ...restProps
 }: {
   name: string | ReactNode;
-  src: string;
+  src?: string | undefined;
   [key: string]: any;
 }) => {
   return (
