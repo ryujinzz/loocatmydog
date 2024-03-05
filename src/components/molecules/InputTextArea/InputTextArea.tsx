@@ -46,15 +46,17 @@ interface InputTextAreaProps {
   request?: string;
   requestCheck: '필수' | '선택';
   placeholder?: string;
+  [key: string]: any;
 }
 
 const InputTextArea = ({
   request = '산책 요청 사항',
   requestCheck = '필수',
   placeholder = '',
+  ...restProps
 }: InputTextAreaProps) => {
   return (
-    <StyledInputTextAreaBox>
+    <StyledInputTextAreaBox {...restProps}>
       <InputTextAreaSpanWrapper $mode={requestCheck}>
         <span className="walkRequest">{request}</span>
         <span className="essential">&#40;{requestCheck}&#41;</span>

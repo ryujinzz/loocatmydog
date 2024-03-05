@@ -1,7 +1,7 @@
 import MyPage from '@/components/organisms/MyPage/MyPage';
 import Splash from '@/components/organisms/Splash/Splash';
 import Settings from '@/components/organisms/Settings/Settings';
-import AddPet from '@/components/organisms/AddPet/AddPet';
+import AddPet, { addPetFormAction } from '@/components/organisms/AddPet/AddPet';
 import ModifyProfile from '@/components/organisms/ModifyProfile/ModifyProfile';
 import HeartList from '@/components/organisms/HeartList/HeartList';
 import { RouteObject } from 'react-router-dom';
@@ -106,6 +106,7 @@ export const navigationItems: NavigationRouteObject[] = [
     path: '/add_mypet',
     element: <AddPet />,
     headerType: ['back', '반려동물 추가'],
+    action: addPetFormAction,
   },
   {
     path: '/edit_my_profile',
